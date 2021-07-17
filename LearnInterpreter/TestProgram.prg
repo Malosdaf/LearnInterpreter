@@ -1,9 +1,13 @@
 ﻿// this is my test program
-float a;
-float b;
 
-a = 5;
-b = 6;
+decimal a; 
+decimal b;
 
-a = a + 8;
+void setA() {
+	a = 8;
+};
+
 b = a + 2;
+
+a = (a + b) * 2 / 5 - b * b; // some complicated shits
+b = b / 0;

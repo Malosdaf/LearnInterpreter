@@ -1,8 +1,9 @@
-Program              : StatementList | CompoundStatement
-CompoundStatement    : OpenBracket StatementList CloseBracket
+Program              : StatementList | Block
+Block                : OpenBracket StatementList CloseBracket
 StatementList        : Statement | Statement Semicolon StatementList
-Statement            : CompoundStatement | AssignmentStatement | DeclerationStatement | Empty
-DeclerationStatement : Type Identifier
+Statement            : Block | Method | AssignmentStatement | DeclarationStatement | Empty
+Method               : void Identifier LeftParen RightParen Block
+DeclarationStatement : Type Variable
 AssignmentStatement  : Variable Assign Expr
 Empty                : 
 Expr                 : Term ((Plus | Minus) Term)*
