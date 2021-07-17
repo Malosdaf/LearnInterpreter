@@ -114,10 +114,10 @@ namespace LearnInterpreter
                     return new Token(TokenType.Dot, ".");
                 }
 
-                throw new Exception("Invalid syntax!");
+                throw new Exception("No syntax!");
             }
 
-            return new Token(TokenType.Eof, string.Empty);
+            return new Token(TokenType.EOF, string.Empty);
         }
 
         private Token Identifier()
